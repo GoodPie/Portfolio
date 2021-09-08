@@ -6,7 +6,6 @@
 		const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		const bgColor = isDarkMode ? 0x111827 : 0XFFFFFF;
 
-
 		VANTA.GLOBE({
 			el: "body",
 			mouseControls: true,
@@ -40,6 +39,7 @@
 
 		body {
 				min-height: 100vh;
+				height: 100%;
 		}
 
     ::selection {
