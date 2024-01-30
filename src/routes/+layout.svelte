@@ -1,5 +1,9 @@
 <script>
 	import Navbar from '$lib/Navbar.svelte';
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
+	inject({ mode: dev ? 'development' : 'production' });
 
 	if (typeof window !== 'undefined') {
 		// Determine background color for globe based on theme
@@ -21,6 +25,7 @@
 		})
 	}
 	import "../app.css";
+
 
 </script>
 
