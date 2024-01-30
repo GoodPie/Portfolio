@@ -1,6 +1,6 @@
-<svelte:head>
+<svelt:head>
     <title>Brandyn Britton - Home</title>
-</svelte:head>
+</svelt:head>
 
 <main class="flex justify-start items-center dark:text-white">
     <div class="p-16">

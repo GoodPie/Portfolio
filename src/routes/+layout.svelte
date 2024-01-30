@@ -1,12 +1,12 @@
 <script>
-	import Navbar from '$components/Navbar.svelte';
+	import Navbar from '$lib/Navbar.svelte';
 
 	if (typeof window !== 'undefined') {
 		// Determine background color for globe based on theme
 		const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		const bgColor = isDarkMode ? 0x111827 : 0XFFFFFF;
 
-		VANTA.GLOBE({
+		window.VANTA.GLOBE({
 			el: "body",
 			mouseControls: true,
 			touchControls: true,
@@ -20,33 +20,15 @@
 			backgroundColor: bgColor
 		})
 	}
+	import "../app.css";
 
 </script>
 
+
+
 <Navbar></Navbar>
+
 
 <slot></slot>
 
-<style global lang="postcss">
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
 
-    * {
-        margin: 0;
-        padding: 0;
-		}
-
-		body {
-				min-height: 100vh;
-				height: 100%;
-		}
-
-    ::selection {
-        background-color: #FFA700;
-        color: white;
-    }
-
-
-
-</style>
