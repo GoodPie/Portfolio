@@ -21,7 +21,7 @@
 			scaleMobile: 1.00,
 			color: 0xededed,
 			color2: 0xFFA700,
-			backgroundColor: bgColor
+			backgroundColor: bgColor,
 		})
 	}
 	import "../app.css";
