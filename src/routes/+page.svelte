@@ -4,13 +4,15 @@
 
 <main class="flex justify-start items-center dark:text-white">
     <div class="p-16">
-        <p class="text-3xl tracking-widest mb-4">Brandyn Britton</p>
-        <h1 class="text-7xl tracking-widest mb-4">Let's make the world a better place</h1>
+        <p class="text-2xl tracking-widest mb-4 vt323-regular">Brandyn Britton</p>
+        <h1 class="text-5xl whitespace-break-spaces w-100 tracking-widest mb-4 vt323-regular">
+            Website Under Construction
+        </h1>
     </div>
 </main>
 
 <style>
     main {
-        height: 90vh;
+        height: 85vh;
     }
 </style>

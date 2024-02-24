@@ -1,39 +1,52 @@
 <script>
-	import Navbar from '$lib/Navbar.svelte';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 
 	inject({ mode: dev ? 'development' : 'production' });
 
-	if (typeof window !== 'undefined') {
-		// Determine background color for globe based on theme
-		const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-		const bgColor = isDarkMode ? 0x111827 : 0XFFFFFF;
 
-		window.VANTA.GLOBE({
-			el: "body",
-			mouseControls: true,
-			touchControls: true,
-			gyroControls: true,
-			minHeight: 200.00,
-			minWidth: 200.00,
-			scale: 2.00,
-			scaleMobile: 1.00,
-			color: 0xededed,
-			color2: 0xFFA700,
-			backgroundColor: bgColor,
-		})
-	}
 	import "../app.css";
 
 
 </script>
 
 
+<main class="p-0 m-0">
 
-<Navbar></Navbar>
+	<div class="flex flex-col p-10 border-2 border-black bg-amber-100 h-dvh inset-2">
+
+		<!-- Fake Window Header -->
+		<div class="flex items-center justify-between min-h  border-black border-2 bg-orange-400 rounded-t-xl">
+
+			<div class="flex flex-col w-full">
+				<div class="flex items-center space-x-2 ps-4 py-4 w-full border-black border-b-2 ">
+					<div class="w-3 border-black border-2 h-3 bg-red-500 rounded-full"></div>
+					<div class="w-3 border-black border-2 h-3 bg-yellow-500 rounded-full"></div>
+					<div class="w-3 border-black border-2 h-3 bg-green-500 rounded-full"></div>
+
+					<div class="ps-2 text-2xl text-black vt323-regular ">
+						BRANDYN'S PORTFOLIO
+					</div>
+				</div>
+
+				<div class="bg-amber-50">
+					<slot></slot>
+				</div>
+			</div>
 
 
-<slot></slot>
+		</div>
+
+
+
+
+
+	</div>
+
+
+</main>
+
+
+
 
 
